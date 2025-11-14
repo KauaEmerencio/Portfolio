@@ -30,7 +30,7 @@ body{
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 3rem;
+    gap: 4rem;
 }
 .menu-link{
     text-decoration: none;
@@ -38,6 +38,7 @@ body{
     font-weight: 500;
     position: relative;
     padding: 0.5rem 0;
+    top: 12px;
 }
 
 .menu-link::after{
@@ -49,7 +50,7 @@ body{
     left: 0;
     background-color: var(--primaria);
     background: linear-gradient(90deg, var(--primaria), var(--secundaria));
-    transition: width 0.3s ease;
+    transition: width 3s ease;
 }
 menu-link:hover::after{
     width: 100%;
@@ -65,19 +66,21 @@ menu-link:hover::after{
     width: 310px;
     height: 340px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    border-radius: 40%;
+    border-radius: 7%;
     border: 4px solid var(--vidro);
-    animation: flutuar 6s ease-in-out infinite;
+    animation: fadeIn 7s ease-in-out, flutuar 4s ease-in-out infinite;
 }
 h1{
     font-size: 3.5rem;
     color: var(--claro);
     font-weight: bold;
     margin: 20px;
+    animation: fadeIn 3s ease-in-out;
 }
 .cabecalho-sub-titulo{
     font-size: 1.4rem;
     color: var(--claro);
+    animation : fadeIn 4s ease-in-out;
 }
 .sobre{
    padding: 6rem 2rem;
@@ -98,13 +101,14 @@ margin-bottom: 30px;
     background: rgba(255, 255, 255, 0.5);
 }
 .sobre-paragrafo{
-    text-align: center;
-    font-size: 1rem;
-    
-}
+    text-align: left;
+    font-size: 0.90rem;
+    color: var(--claro);
+    line-height: 1.6rem;
+    transition: opacity 1s, transform 1s ease;
+ }
 .habilidades{
-    padding: 6rem 2rem;
-    background-color: var(--secundaria);
+    padding: 8rem 2rem;
 }
 .titulo-skils{
 font-size: 3.2rem;
@@ -142,7 +146,23 @@ text-decoration: none;
 .projetos{
     padding: 6rem 2rem;
 }
-
+.buttons-projetos{
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    gap: 1rem;             
+    margin-top: 2rem;
+}
+.buttons-projetos a{
+    margin: 0;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    color: var(--claro);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.6s ease;
+}
 .projetos-caixa{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -208,7 +228,13 @@ max-width: 600px;
 margin: 0 auto;
  background: rgba(255, 255, 255, 0.5);
 padding: 2rem;
-border-radius: 16px;
+border-radius: 14px;
+}
+#nome, #email{
+    width: 80%;
+    height: 40px;
+    color: white;
+    border-radius: 100px;
 }
 
 .grupo-form{
@@ -221,7 +247,7 @@ padding: 1rem;
  color: var(--claro);
  border: 1px solid var(--vidro);
  outline: none;
- border-radius: 30px;
+ border-radius: 12px;
 }
 .campo-form:focus{
     border-color: var(--secundaria);
@@ -254,6 +280,15 @@ padding: 1rem;
                 radial-gradient(circle at 90% 80%, var(--secundaria)0%, transparent 20%),
                 var(--maisescuro);
 }
+
+@keyframes fadeIn {
+    0%   { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
 @keyframes flutuar{
     0%, 100%{
         transform: translateY(0);
