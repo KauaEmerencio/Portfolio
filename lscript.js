@@ -49,3 +49,7 @@ function enviarWhats(event) {
 document.getElementById('email').value = '';
 document.getElementById('mensagem').value = '';
 }
+
+/*
+git add . ; git commit -m "Atualizando tudo" ; git push
+*/
