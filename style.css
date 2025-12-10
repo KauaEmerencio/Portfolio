@@ -355,11 +355,18 @@ color: var(--claro);
     transform: translateY(0); 
 }
 
-.projetos-card.revelar:nth-child(even) {
-    transition-delay: 0.2s;
+.insta:hover{
+    color: #E1306C;
+    font-weight: bold;
 }
-
-
+.git:hover{
+    color: #83e700;
+    font-weight: bold;
+}
+.linkedin:hover{
+    color: #0A66C2;
+    font-weight: bold;
+}
 @keyframes fadeIn {
     0%   { opacity: 0; transform: translateY(10px); }
     100% { opacity: 1; transform: translateY(0); }
