@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const rodapeTexto = document.querySelector('.rodape-texto');
     if (rodapeTexto) {
-        rodapeTexto.innerHTML = `© ${year} Dev Kauã. Todos os direitos reservados. ${diaMes}`;
+        rodapeTexto.innerHTML = `© ${year} Dev Kauã. <br> Todos os direitos reservados. ${diaMes}`;
     }
     const yearElement = document.getElementById("year");
     if (yearElement) {
@@ -41,7 +41,7 @@ function enviarWhats(event) {
     const texto = `Olá, Kauã!👨‍💻 Tudo bem??` +
                   `Nome: ${nome}\n` +
                   `Email: ${email}\n` +
-                  `Mensagem: ${mensagem}`;
+                  `${mensagem}`;
     const msgFormatada = encodeURIComponent(texto);
     const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
         window.open(url, '_blank');
