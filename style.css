@@ -215,7 +215,11 @@ width: 100%;
 object-fit: cover;
 
 }
+#imgmar{
+    height: auto;
+    object-fit: cover;
 
+}
 .caixa-texto-projetos{
     padding: 1rem;
 }
